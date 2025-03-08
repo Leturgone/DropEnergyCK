@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="statistics">Statistics</string>
+    <string name="diary">Diary</string>
+    <string name="options">Options</string>
+    <string name="money">Money</string>
+    <string name="cans">Cans</string>
+    <string name="progress">Progress</string>
+    <string name="saved_money">Saved</string>
+    <string name="predict">Prediction</string>
+    <string name="in_day">per day</string>
+    <string name="in_week">per week</string>
+    <string name="in_month">per month</string>
+    <string name="in_year">per year</string>
+    <string name="loading_everyday_money_err">Failed to load daily money</string>
+    <string name="loading_saved_money_err">Failed to load saved money</string>
+    <string name="loading_currency_err">Failed to load currency</string>
+    <string name="daily_check">Daily Check</string>
+    <string name="this_week">This week</string>
+    <string name="loading_week_err">Error loading week</string>
+    <string-array name="days_of_week">
+        <item>MO</item>
+        <item>TU</item>
+        <item>WE</item>
+        <item>TH</item>
+        <item>FR</item>
+        <item>SA</item>
+        <item>SU</item>
+    </string-array>
+    <string name="saved_cans">Not drunk</string>
+    <string name="_cans">cans</string>
+    <string name="loading_saved_cans_err">Failed to load not drunk cans</string>
+    <string name="loading_everyday_cans_err">Failed to load daily cans</string>
+    <string name="loading_diary_err">Failed to load diary</string>
+    <string name="green_diary_record">I overcame the temptation</string>
+    <string name="yellow_diary_record">I want an energy drink</string>
+    <string name="red_diary_record">I bought an energy drink</string>
+    <string name="first_diary_record">I registered in the app</string>
+    <string name="intensity">Intensity</string>
+    <string name="create_record">Create Record</string>
+    <string name="record_date">Record Date</string>
+    <string name="rate">Rate</string>
+    <string name="save">Save</string>
+    <string name="dialog_cans_question">How many energy drinks do you buy per day?</string>
+    <string name="count">Count</string>
+    <string name="number_err">Enter only a number</string>
+    <string name="next">Next</string>
+    <string name="dialog_money_question">What is the average price of one energy drink?</string>
+    <string name="price">Price</string>
+    <string name="dialog_money_cur_question">Select a currency</string>
+    <string name="ok">OK</string>
+    <string name="reg_error">Failed to sign up</string>
+    <string name="login">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_err">Invalid email or password</string>
+    <string name="email_err">Check email for errors</string>
+    <string name="password_err">Password must not contain spaces</string>
+    <string name="password_short_err">Password must contain at least 8 characters</string>
+    <string name="registration">Sign up</string>
+    <string name="already_have">Already have an account? Sign in</string>
+    <string name="logout">Log out</string>
+</resources>

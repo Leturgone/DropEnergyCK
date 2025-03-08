@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name" translatable="false">DropEnergy</string>
+    <string name="statistics">Статистика</string>
+    <string name="diary">Дневник</string>
+    <string name="options">Настройки</string>
+    <string name="money">Деньги</string>
+    <string name="cans">Банки</string>
+    <string name="progress">Прогресс</string>
+    <string name="saved_money">Сэкономлено</string>
+    <string name="predict">Прогноз</string>
+    <string name="in_day">в день</string>
+    <string name="in_week">в неделю</string>
+    <string name="in_month">в месяц</string>
+    <string name="in_year">в год</string>
+    <string name="loading_everyday_money_err">Не удалось загрузить ежедневные деньги</string>
+    <string name="loading_saved_money_err">Не удалось загрузить сохраненные деньги</string>
+    <string name="loading_currency_err">Не удалось загрузить валюту</string>
+    <string name="daily_check">Ежедневная отметка</string>
+    <string name="this_week">Эта неделя</string>
+    <string name="loading_week_err">Ошибка загрузки недели</string>
+    <string-array name="days_of_week">
+        <item>ПН</item>
+        <item>ВТ</item>
+        <item>СР</item>
+        <item>ЧТ</item>
+        <item>ПТ</item>
+        <item>СБ</item>
+        <item>ВС</item>
+    </string-array>
+    <string name="saved_cans">Не выпито</string>
+    <string name="_cans">банок</string>
+    <string name="loading_saved_cans_err">Не удалось загрузить не выпитые банки</string>
+    <string name="loading_everyday_cans_err">Не удалось загрузить ежедневные банки</string>
+    <string name="loading_diary_err">Не удалось загрузить дневник</string>
+    <string name="green_diary_record">Я справился с соблазном</string>
+    <string name="yellow_diary_record">Я хочу энергетик</string>
+    <string name="red_diary_record">Я купил энергетик</string>
+    <string name="first_diary_record">Я зарегистрировался в приложении</string>
+    <string name="intensity">Интенсивность</string>
+    <string name="create_record">Создать запись</string>
+    <string name="record_date">Дата записи</string>
+    <string name="rate">Оцените</string>
+    <string name="save">Сохранить</string>
+    <string name="dialog_cans_question">Сколько вы покупаете энергетиков в день?</string>
+    <string name="count">Количество</string>
+    <string name="number_err">Введите только число</string>
+    <string name="next">Дальше</string>
+    <string name="dialog_money_question">Сколько в среднем стоит один энергетик?</string>
+    <string name="price">Стоимость</string>
+    <string name="dialog_money_cur_question">Выберите валюту</string>
+    <string name="ok">ОК</string>
+    <string name="reg_error">Не удалось выполнить регистрацию</string>
+    <string name="login">Войти</string>
+    <string name="email">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="login_err">Неверный логин или пароль</string>
+    <string name="email_err">Проверьте логин на ошибки</string>
+    <string name="password_err">Пароль не должен содержать пробелов</string>
+    <string name="password_short_err">Пароль должен содержать минимум 8 символов</string>
+    <string name="registration">Создать аккаунт</string>
+    <string name="already_have">Уже есть аккаунт? Войти</string>
+    <string name="logout">Выйти из аккаунта</string>
+</resources>
