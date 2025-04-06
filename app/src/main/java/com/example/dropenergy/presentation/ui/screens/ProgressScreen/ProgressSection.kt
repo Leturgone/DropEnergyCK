@@ -28,9 +28,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.dropenergy.R
-import com.example.dropenergy.ui.components.ProgressCategory
-import com.example.dropenergy.ui.theme.Green
-import com.example.dropenergy.ui.theme.Yellow40
+import com.example.dropenergy.presentation.ui.components.ProgressCategory
+import com.example.dropenergy.presentation.ui.theme.Green
+import com.example.dropenergy.presentation.ui.theme.Yellow40
 
 
 lateinit var  progressCategories: List<ProgressCategory>

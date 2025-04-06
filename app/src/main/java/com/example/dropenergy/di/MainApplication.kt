@@ -5,7 +5,7 @@ import com.example.dropenergy.data.repository.AuthRepository
 import com.example.dropenergy.domain.repository.IAuthRepository
 import com.example.dropenergy.domain.repository.IUserRepository
 import com.example.dropenergy.data.repository.UserRepository
-import com.example.dropenergy.viewmodel.DBViewModel
+import com.example.dropenergy.presentation.viewmodel.DBViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase

@@ -23,9 +23,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.dropenergy.R
-import com.example.dropenergy.ui.theme.LightGreen
-import com.example.dropenergy.ui.theme.LightRed
-import com.example.dropenergy.ui.theme.LightYellow
+import com.example.dropenergy.presentation.ui.theme.LightGreen
+import com.example.dropenergy.presentation.ui.theme.LightRed
+import com.example.dropenergy.presentation.ui.theme.LightYellow
 
 //Окно с большими разноцветными панелями для создания записи
 @Composable

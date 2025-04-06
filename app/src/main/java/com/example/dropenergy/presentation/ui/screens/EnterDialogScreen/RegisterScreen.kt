@@ -1,6 +1,6 @@
 package com.example.dropenergy.EnterDialogScreen
 
-import android.util.Log
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,7 +15,6 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
@@ -40,16 +39,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.dropenergy.ui.screens.CustomToastMessage
+import com.example.dropenergy.presentation.ui.screens.CustomToastMessage
 import com.example.dropenergy.R
 import com.example.dropenergy.domain.repository.GetDBState
-import com.example.dropenergy.viewmodel.DBViewModel
-import com.example.dropenergy.ui.theme.LightGreen
-import com.example.dropenergy.ui.theme.LightYellow
+import com.example.dropenergy.presentation.viewmodel.DBViewModel
+import com.example.dropenergy.presentation.ui.theme.LightGreen
+import com.example.dropenergy.presentation.ui.theme.LightYellow
 
-
+//@Preview(showBackground = true)
 @Composable
-fun LoginScreen(navController: NavHostController, viewModel: DBViewModel){
+fun RegScreen(navController: NavHostController, viewModel: DBViewModel){
     var loginInputText  by remember { mutableStateOf("") }
     var passwordInputText  by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
@@ -59,7 +58,23 @@ fun LoginScreen(navController: NavHostController, viewModel: DBViewModel){
     var showToast by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf("") }
 
-    val loginState = viewModel?.loginFlow?.collectAsState()
+    val loginState = viewModel.loginFlow?.collectAsState()
+    loginState?.value.let {state ->
+        when(state){
+            is GetDBState.Success -> {
+                LaunchedEffect(Unit) {
+                    navController.popBackStack()
+                    navController.popBackStack()
+                    navController.navigate("progress")
+
+                }
+
+            }
+            else -> {null}
+        }
+
+    }
+
 
     val emailErr = stringResource(id = R.string.email_err)
     val passwordErr = stringResource(id = R.string.password_err)
@@ -80,13 +95,12 @@ fun LoginScreen(navController: NavHostController, viewModel: DBViewModel){
                 onDismiss = { showToast = false },
             )
             Box(Modifier.fillMaxWidth(),contentAlignment = Alignment.Center) {
-
                 Column( modifier = Modifier.fillMaxSize(),
                     horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.SpaceBetween) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Spacer(modifier = Modifier.height(60.dp))
                         Text(
-                            text = stringResource(id = R.string.login),
+                            text = stringResource(id = R.string.registration),
                             fontSize = 28.sp,
                             color = MaterialTheme.colorScheme.onBackground,
                             fontWeight = FontWeight.Bold,
@@ -131,50 +145,26 @@ fun LoginScreen(navController: NavHostController, viewModel: DBViewModel){
                             })
                     }
 
-
-                    loginState?.value.let {state ->
-                        when(state){
-                            is GetDBState.Success -> {
-                                LaunchedEffect(Unit) {
-                                    navController.popBackStack()
-                                    navController.popBackStack()
-                                    navController.navigate("progress")
-
-                                }
-
-                            }
-                            is GetDBState.Loading -> {
-                                CircularProgressIndicator()
-                            }
-                            is GetDBState.Failure -> {
-                                showToast = true
-                                errorMessage = stringResource(id = R.string.login_err)
-                            }
-                            else -> {null}
-                        }
-
-                    }
-
                     Button(onClick = {
                         if( loginInputText.isEmpty() || !loginInputText.matches("^[A-Za-z0-9@.]+$".toRegex())
                             || loginInputText.matches("\\s".toRegex())){
-                            showToast = true
                             errorMessage = emailErr
-                            Log.e("LoginErr","Ошибка ввода почты")
+                            showToast = true
                         }
                         else if( passwordInputText.isEmpty() || !passwordInputText.matches("^[A-Za-z0-9]+$".toRegex())
                             || passwordInputText.matches("\\s".toRegex())){
-                            showToast = true
                             errorMessage = passwordErr
-                            Log.e("LoginErr","Ошибка ввода пароля")
+                            showToast = true
                         }
                         else if (passwordInputText.length < 8){
-                            showToast = true
                             errorMessage = shortPasswordErr
-                            Log.e("LoginErr","Ошибка короткого пароля")
+                            showToast = true
                         }
                         else {
-                            viewModel.login(loginInputText,passwordInputText)
+                            //Загрузка в бд
+                            viewModel.createUser(loginInputText,passwordInputText)
+                            navController.navigate("dialog_cans")
+
                         }
 
                     },
@@ -182,11 +172,14 @@ fun LoginScreen(navController: NavHostController, viewModel: DBViewModel){
                     ) {
                         Text(text = stringResource(id = R.string.next))
                     }
-
+                    Text(text = stringResource(id = R.string.already_have),
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.clickable {
+                            navController.navigate("login")
+                        })
 
                     Spacer(modifier = Modifier.height(1.dp))
                 }
-
             }
         }
     }

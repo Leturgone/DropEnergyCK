@@ -42,12 +42,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.dropenergy.ui.screens.CustomToastMessage
+import com.example.dropenergy.presentation.ui.screens.CustomToastMessage
 import com.example.dropenergy.R
 import com.example.dropenergy.domain.repository.GetDBState
-import com.example.dropenergy.viewmodel.DBViewModel
-import com.example.dropenergy.ui.theme.LightGreen
-import com.example.dropenergy.ui.theme.LightYellow
+import com.example.dropenergy.presentation.viewmodel.DBViewModel
+import com.example.dropenergy.presentation.ui.theme.LightGreen
+import com.example.dropenergy.presentation.ui.theme.LightYellow
 
 @Composable
 fun CurrencyListItem(currency: String, isSelected: Boolean, onClick: () -> Unit){

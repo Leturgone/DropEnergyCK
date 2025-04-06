@@ -1,4 +1,4 @@
-package com.example.dropenergy.ui.screens
+package com.example.dropenergy.presentation.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn

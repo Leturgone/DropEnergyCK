@@ -16,8 +16,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.dropenergy.ui.components.OptionsFunction
-import com.example.dropenergy.viewmodel.DBViewModel
+import com.example.dropenergy.presentation.ui.components.OptionsFunction
+import com.example.dropenergy.presentation.viewmodel.DBViewModel
 import com.example.dropenergy.R
 
 

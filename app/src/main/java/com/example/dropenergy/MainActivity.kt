@@ -25,10 +25,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.dropenergy.ProgressScreen.DailyCheckSection
 import com.example.dropenergy.ProgressScreen.ProgressSection
-import com.example.dropenergy.ui.screens.AppNavigation
-import com.example.dropenergy.ui.screens.BottomNavigationBar
-import com.example.dropenergy.viewmodel.DBViewModel
-import com.example.dropenergy.ui.theme.DropEnergyTheme
+import com.example.dropenergy.presentation.ui.screens.AppNavigation
+import com.example.dropenergy.presentation.ui.screens.BottomNavigationBar
+import com.example.dropenergy.presentation.viewmodel.DBViewModel
+import com.example.dropenergy.presentation.ui.theme.DropEnergyTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

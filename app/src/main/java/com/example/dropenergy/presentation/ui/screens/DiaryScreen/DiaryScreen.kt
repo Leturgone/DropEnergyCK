@@ -28,11 +28,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.dropenergy.ui.screens.CustomToastMessage
+import com.example.dropenergy.presentation.ui.screens.CustomToastMessage
 import com.example.dropenergy.R
 import com.example.dropenergy.domain.model.DiaryRecord
 import com.example.dropenergy.domain.repository.GetDBState
-import com.example.dropenergy.viewmodel.DBViewModel
+import com.example.dropenergy.presentation.viewmodel.DBViewModel
 
 
 @Composable
