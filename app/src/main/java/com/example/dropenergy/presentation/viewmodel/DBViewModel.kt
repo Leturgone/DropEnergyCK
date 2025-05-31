@@ -237,8 +237,6 @@ class DBViewModel(
         _savedCansFlow.value = result
     }
 
-
-
     fun getEverydayCans() = viewModelScope.launch {
         _everydayCansFlow.value = GetDBState.Loading
         val result = currentUser?.let {
@@ -248,8 +246,6 @@ class DBViewModel(
         }
         _everydayCansFlow.value = result
     }
-
-
 
     fun logout(){
         authRepository.logout()

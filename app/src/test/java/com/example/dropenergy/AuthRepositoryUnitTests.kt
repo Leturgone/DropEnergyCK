@@ -34,8 +34,6 @@ class AuthRepositoryUnitTests {
         mockAuthResult = mockk<AuthResult>()
         authRepository = AuthRepository(firebaseAuth)
 
-
-
     }
 
     @Test
