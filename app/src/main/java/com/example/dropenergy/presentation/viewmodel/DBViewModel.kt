@@ -241,7 +241,7 @@ class DBViewModel(
         _everydayCansFlow.value = GetDBState.Loading
         val result = currentUser?.let {
             withContext(Dispatchers.IO) {
-                userRepository.getSavedCans(it.uid)
+                userRepository.getEverydayCans(it.uid)
             }
         }
         _everydayCansFlow.value = result

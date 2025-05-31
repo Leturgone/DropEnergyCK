@@ -130,7 +130,7 @@ class UserRepository(
         val newMoney : Int
         try {
             newMoney = when (status) {
-                true -> getUser(uid)?.savedMoney?.plus(getUser(uid)?.everydayMoney!!)!!
+                true -> getUser(uid)?.savedMoney?.plus(getUser(uid)?.everydayMoney!! * getUser(uid)?.everydayCans!!)!!
                 false -> 0
             }
             database.child("users").child(uid).child("savedMoney").setValue(newMoney)
