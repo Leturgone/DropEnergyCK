@@ -21,7 +21,7 @@
 # Установка
 1. Склонировать данный репозиторий:  
    ```bash
-   https://github.com/Leturgone/DropEnergy.git
+   https://github.com/Leturgone/DropEnergyCK.git
 2. Открыть проект Android Studio.
 3. Добавить в каталог app свой google-services.json
 4. Запустить приложения на эмуляторе или телефоне
